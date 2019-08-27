@@ -1,12 +1,15 @@
 object pepita {
 	var energia = 100
 	
+	method energia() {
+		return energia
+	}
 
 	method estaCansada() {
 		return energia < 50
 	}
 
-	method vola(kms) {
+	method volar(kms) {
 		energia -= 10 + kms
 	}
 
@@ -37,6 +40,14 @@ object pepita {
 		self.come(alpiste)
 		self.vola(5)
 		return energia
+	}
+	
+	method haceLoQueQuieras() {
+		if(self.estaCansada())
+			self.come(alpiste)
+			
+		if(self.estaFeliz())
+			self.vola(8)
 	}
 	
 }
@@ -80,25 +91,49 @@ object mijo {
 	
 }
 
-/* 
+ 
 object canelones {
-	var salsa
-	var queso
-	
-	method energiaQueOtorga() { 
-
-	}
+	var salsa = false
+	var queso = false
 	
 	method tieneSalsa() {
-		if(salsa)
-			salsa = true
+		return salsa
 	}
-	method tieneSalsa()
 	
-	method tieneSalsa()
+	method tieneQueso(){
+			return queso
+	}
+	
+	method ponerSalsa() {
+		salsa = true
+	}
+	
+	method sacarSalsa() {
+		salsa = false
+	}
+	
+	method ponerQueso() {
+		queso = true
+	}
+	
+	method sacarQueso() {
+		queso = false
+	}
+	
+	method energiaQueOtorga() {
+		var cantidadEnergia = 20
+		
+		if(salsa)
+			cantidadEnergia += 5
+		if(queso)
+			cantidadEnergia += 7
+
+		return cantidadEnergia
+	}
 }
 
-*/
+
+
 
 
 
