@@ -36,9 +36,9 @@ object pepita {
 	}
 	
 	method salirAComer() {
-		self.vola(5)
+		self.volar(5)
 		self.come(alpiste)
-		self.vola(5)
+		self.volar(5)
 		return energia
 	}
 	
@@ -47,7 +47,7 @@ object pepita {
 			self.come(alpiste)
 			
 		if(self.estaFeliz())
-			self.vola(8)
+			self.volar(8)
 	}
 	
 }
@@ -132,9 +132,17 @@ object canelones {
 	}
 }
 
+object roque {
+	var ave
+	
+	method entrenar(_ave) {
+		ave = _ave
+		ave.volar(10)
+		ave.come(alpiste)
+		ave.volar(5)
+		ave.haceLoQueQuieras()
+	}
+}
 
-
-
-
-
+// Para que Roque entrene a Pepita: >>> roque.entrenar(pepita)
 
