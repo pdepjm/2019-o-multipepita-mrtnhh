@@ -81,7 +81,6 @@ object mijo {
 	}
 
 	method mojarse() {
-		if (mojado)
 			mojado = true
 	}
 	
